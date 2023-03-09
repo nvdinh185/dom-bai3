@@ -1,9 +1,3 @@
-var headingElement = document.querySelector("#heading");
-
-headingElement.innerText = 'Trang tin VinaEnter Edu';
-
-const ulElement = document.querySelector("#list");
-
 const listNews = [
     {
         id: 1,
@@ -24,18 +18,3 @@ const listNews = [
         content: 'Các teen girl nhà mình hẳn đang rất hào hứng chọn những bộ đồ thật đẹp để đi chơi 8/3. Những gợi ý ăn mặc dưới đây sẽ giúp các nàng có những set đồ thật đẹp để diện trong ngày 8.3 nhé!'
     }
 ];
-
-listNews.forEach(function (news) {
-    const liElement = document.createElement('li');
-    liElement.innerHTML = `
-        <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
-        <div class="khoiphai">
-            <h2><a href="http://google.com/">${news.title}</a></h2>
-            <p>${news.content}</p>
-        </div>
-        <div class="clr"></div>
-    `;
-
-    ulElement.appendChild(liElement);
-
-})
