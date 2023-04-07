@@ -27,34 +27,14 @@ const listNews = [
 
 listNews.forEach(function (news) {
     const liElement = document.createElement('li');
-    const aElement = document.createElement('a');
-    aElement.href = 'http://google.com/';
-    const imgElement = document.createElement('img');
-    imgElement.src = news.img;
-    imgElement.alt = news.img;
-    aElement.appendChild(imgElement);
-    liElement.appendChild(aElement);
-
-    const divElement = document.createElement('div');
-    divElement.className = 'khoiphai';
-
-    const h2Element = document.createElement('h2');
-    const a2Element = document.createElement('a');
-
-    a2Element.href = 'http://google.com/';
-    a2Element.innerText = news.title;
-    h2Element.appendChild(a2Element);
-
-    const pElement = document.createElement('p');
-    pElement.innerText = news.content;
-
-    divElement.appendChild(h2Element);
-    divElement.appendChild(pElement);
-    liElement.appendChild(divElement);
-
-    const div2Element = document.createElement('div');
-    div2Element.className = 'clr';
-    liElement.appendChild(div2Element);
+    liElement.innerHTML = `
+        <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
+        <div class="khoiphai">
+            <h2><a href="http://google.com/">${news.title}</a></h2>
+            <p>${news.content}</p>
+        </div>
+        <div class="clr"></div>
+    `;
 
     ulElement.appendChild(liElement);
 
