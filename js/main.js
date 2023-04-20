@@ -25,17 +25,33 @@ const listNews = [
     }
 ];
 
+// listNews.forEach(function (news) {
+//     const liElement = document.createElement('li');
+//     liElement.innerHTML = `
+//         <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
+//         <div class="khoiphai">
+//             <h2><a href="http://google.com/">${news.title}</a></h2>
+//             <p>${news.content}</p>
+//         </div>
+//         <div class="clr"></div>
+//         `;
+
+//     ulElement.appendChild(liElement);
+
+// })
+
+var htmls = '';
 listNews.forEach(function (news) {
-    const liElement = document.createElement('li');
-    liElement.innerHTML = `
-        <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
-        <div class="khoiphai">
-            <h2><a href="http://google.com/">${news.title}</a></h2>
-            <p>${news.content}</p>
-        </div>
-        <div class="clr"></div>
+    htmls += `
+        <li>
+            <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
+            <div class="khoiphai">
+                <h2><a href="http://google.com/">${news.title}</a></h2>
+                <p>${news.content}</p>
+            </div>
+            <div class="clr"></div>
+        </li>
     `;
-
-    ulElement.appendChild(liElement);
-
 })
+
+ulElement.innerHTML = htmls;
