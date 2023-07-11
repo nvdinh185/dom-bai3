@@ -25,6 +25,7 @@ const listNews = [
     }
 ];
 
+// Cách 1:
 // listNews.forEach(function (news) {
 //     const liElement = document.createElement('li');
 //     liElement.innerHTML = `
@@ -40,6 +41,7 @@ const listNews = [
 
 // })
 
+// Cách 2:
 // var htmls = '';
 // listNews.forEach(function (news) {
 //     htmls += `
@@ -54,6 +56,7 @@ const listNews = [
 //     `;
 // })
 
+// Cách 3:
 var htmls = listNews.map(function (news) {
     return `
         <li>
