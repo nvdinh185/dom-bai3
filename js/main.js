@@ -40,9 +40,22 @@ const listNews = [
 
 // })
 
-var htmls = '';
-listNews.forEach(function (news) {
-    htmls += `
+// var htmls = '';
+// listNews.forEach(function (news) {
+//     htmls += `
+//         <li>
+//             <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
+//             <div class="khoiphai">
+//                 <h2><a href="http://google.com/">${news.title}</a></h2>
+//                 <p>${news.content}</p>
+//             </div>
+//             <div class="clr"></div>
+//         </li>
+//     `;
+// })
+
+var htmls = listNews.map(function (news) {
+    return `
         <li>
             <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
             <div class="khoiphai">
@@ -54,4 +67,4 @@ listNews.forEach(function (news) {
     `;
 })
 
-ulElement.innerHTML = htmls;
+ulElement.innerHTML = htmls.join('');
