@@ -56,6 +56,8 @@ const listNews = [
 //     `;
 // })
 
+// ulElement.innerHTML = htmls;
+
 // Cách 3:
 var htmls = listNews.map(function (news) {
     return `
