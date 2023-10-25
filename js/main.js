@@ -29,9 +29,9 @@ const listNews = [
 // listNews.forEach(function (news) {
 //     const liElement = document.createElement('li');
 //     liElement.innerHTML = `
-//         <a href="http://google.com/"><img src=images/${news.img} alt=${news.img} /></a>
+//         <a href="#"><img src=images/${news.img} alt=${news.img} /></a>
 //         <div class="khoiphai">
-//             <h2><a href="http://google.com/">${news.title}</a></h2>
+//             <h2><a href="#">${news.title}</a></h2>
 //             <p>${news.content}</p>
 //         </div>
 //         <div class="clr"></div>
@@ -46,9 +46,9 @@ const listNews = [
 // listNews.forEach(function (news) {
 //     htmls += `
 //         <li>
-//             <a href="http://google.com/"><img src=images/${news.img} alt=${news.img} /></a>
+//             <a href="#"><img src=images/${news.img} alt=${news.img} /></a>
 //             <div class="khoiphai">
-//                 <h2><a href="http://google.com/">${news.title}</a></h2>
+//                 <h2><a href="#">${news.title}</a></h2>
 //                 <p>${news.content}</p>
 //             </div>
 //             <div class="clr"></div>
@@ -62,9 +62,9 @@ const listNews = [
 var htmls = listNews.map(function (news) {
     return `
         <li>
-            <a href="http://google.com/"><img src=images/${news.img} alt=${news.img} /></a>
+            <a href="#"><img src="images/${news.img}" alt="${news.img}" /></a>
             <div class="khoiphai">
-                <h2><a href="http://google.com/">${news.title}</a></h2>
+                <h2><a href="#">${news.title}</a></h2>
                 <p>${news.content}</p>
             </div>
             <div class="clr"></div>
