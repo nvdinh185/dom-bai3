@@ -11,7 +11,7 @@ async function displayData() {
     var htmls = listNews.map(function (news) {
         return `
             <li>
-                <a href="http://google.com/"><img src=${news.img} alt=${news.img} /></a>
+                <a href="http://google.com/"><img src=images/${news.img} alt=${news.img} /></a>
                 <div class="khoiphai">
                     <h2><a href="http://google.com/">${news.title}</a></h2>
                     <p>${news.content}</p>
