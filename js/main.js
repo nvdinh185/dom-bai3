@@ -29,7 +29,7 @@ const listNews = [
 // listNews.forEach(function (news) {
 //     const liElement = document.createElement('li');
 //     liElement.innerHTML = `
-//         <a href="#"><img src=images/${news.img} alt=${news.img} /></a>
+//         <a href="#"><img src="images/${news.img}" alt="${news.img}"" /></a>
 //         <div class="khoiphai">
 //             <h2><a href="#">${news.title}</a></h2>
 //             <p>${news.content}</p>
@@ -42,25 +42,9 @@ const listNews = [
 // })
 
 // Cách 2:
-// var htmls = '';
-// listNews.forEach(function (news) {
-//     htmls += `
-//         <li>
-//             <a href="#"><img src=images/${news.img} alt=${news.img} /></a>
-//             <div class="khoiphai">
-//                 <h2><a href="#">${news.title}</a></h2>
-//                 <p>${news.content}</p>
-//             </div>
-//             <div class="clr"></div>
-//         </li>
-//     `;
-// })
-
-// ulElement.innerHTML = htmls;
-
-// Cách 3:
-var htmls = listNews.map(function (news) {
-    return `
+var htmls = '';
+listNews.forEach(function (news) {
+    htmls += `
         <li>
             <a href="#"><img src="images/${news.img}" alt="${news.img}" /></a>
             <div class="khoiphai">
@@ -72,4 +56,20 @@ var htmls = listNews.map(function (news) {
     `;
 })
 
-ulElement.innerHTML = htmls.join('');
+ulElement.innerHTML = htmls;
+
+// Cách 3:
+// var htmls = listNews.map(function (news) {
+//     return `
+//         <li>
+//             <a href="#"><img src="images/${news.img}" alt="${news.img}" /></a>
+//             <div class="khoiphai">
+//                 <h2><a href="#">${news.title}</a></h2>
+//                 <p>${news.content}</p>
+//             </div>
+//             <div class="clr"></div>
+//         </li>
+//     `;
+// })
+
+// ulElement.innerHTML = htmls.join('');
